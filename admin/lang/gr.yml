@@ -1,0 +1,32 @@
+# login
+Password_Error: 'Σφάλμα κωδικού πρόσβασης'
+
+# sections
+Dashboard:    'Ταμπλό'
+Pages:        'Σελίδες'
+Images:       'Εικόνες'
+Uploads:      'Uploads'
+Blocks:       'Blocks'
+Themes:       'Themes'
+Plugins:      'Plugins'
+Settings:     'Ρυθμίσεις'
+Support:      'Υποστήριξη'
+
+
+# pages
+Directory:      'Κατάλογος'
+Name:           'Όνομα'
+Extension:      'Extension'
+Options:        'Επιλογές'
+Select_Option:  'Select Option'
+Preview:        'Προεπισκόπηση'
+Edit_File:      'Επεξεργασία αρχείου'
+Rename_File:    'Μετονομασία αρχείου'
+New_File:       'Νέο Αρχείο'
+New_Folder:     'Νέος φάκελος'
+Remove_File:    'Κατάργηση Αρχείο'
+Remove_Folder:  'Κατάργηση φακέλου'
+
+
+# edit file
+Edit_File:      'Επεξεργασία αρχείου'
