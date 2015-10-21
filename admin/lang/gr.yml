@@ -1,32 +1,32 @@
 # login
-Password_Error: 'Password Error'
+Password_Error: 'Σφάλμα κωδικού πρόσβασης'
 
 # sections
-Dashboard:    'Dashboard'
-Pages:        'Pages'
-Images:       'Images'
+Dashboard:    'Ταμπλό'
+Pages:        'Σελίδες'
+Images:       'Εικόνες'
 Uploads:      'Uploads'
 Blocks:       'Blocks'
 Themes:       'Themes'
 Plugins:      'Plugins'
-Settings:     'Settings'
-Support:      'Support'
+Settings:     'Ρυθμίσεις'
+Support:      'Υποστήριξη'
 
 
 # pages
-Directory:      'Directory'
-Name:           'Name'
+Directory:      'Κατάλογος'
+Name:           'Όνομα'
 Extension:      'Extension'
-Options:        'Options'
+Options:        'Επιλογές'
 Select_Option:  'Select Option'
-Preview:        'Preview'
-Edit_File:      'Edit File'
-Rename_File:    'Rename File'
-New_File:       'New File'
-New_Folder:     'New Folder'
-Remove_File:    'Remove File'
-Remove_Folder:  'Remove Folder'
+Preview:        'Προεπισκόπηση'
+Edit_File:      'Επεξεργασία αρχείου'
+Rename_File:    'Μετονομασία αρχείου'
+New_File:       'Νέο Αρχείο'
+New_Folder:     'Νέος φάκελος'
+Remove_File:    'Κατάργηση Αρχείο'
+Remove_Folder:  'Κατάργηση φακέλου'
 
 
 # edit file
-Edit_File:      'Edit File'
+Edit_File:      'Επεξεργασία αρχείου'
