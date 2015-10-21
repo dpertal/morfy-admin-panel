@@ -1,0 +1,32 @@
+# login
+Password_Error: 'Password Error'
+
+# sections
+Dashboard:    'Dashboard'
+Pages:        'Pages'
+Images:       'Images'
+Uploads:      'Uploads'
+Blocks:       'Blocks'
+Themes:       'Themes'
+Plugins:      'Plugins'
+Settings:     'Settings'
+Support:      'Support'
+
+
+# pages
+Directory:      'Directory'
+Name:           'Name'
+Extension:      'Extension'
+Options:        'Options'
+Select_Option:  'Select Option'
+Preview:        'Preview'
+Edit_File:      'Edit File'
+Rename_File:    'Rename File'
+New_File:       'New File'
+New_Folder:     'New Folder'
+Remove_File:    'Remove File'
+Remove_Folder:  'Remove Folder'
+
+
+# edit file
+Edit_File:      'Edit File'

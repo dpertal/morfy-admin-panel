@@ -1,0 +1,28 @@
+<?php $this->partial('head',[]); ?>
+<?php $this->partial('navigation',[]); ?>
+<!-- wrapper -->
+<main id="wrapper">
+    <?php $this->partial('header',['title'=>$title]); ?>
+    <!-- content -->
+    <section id="content">
+      <div class="container">
+        <!-- Main  page -->
+        <?php 
+          if(Session::exists('user')){
+            if($type == 'New Folder'){ 
+              echo 'Get new folder function';
+            }else if($type == 'Rename'){
+              echo 'Get rename function';
+            }else if($type == 'Remove File'){
+              echo 'Get remove file function';
+            }else if($type == 'Remove Folder'){
+              echo 'Get remove folder function';
+            }else{
+              echo 'Access Deny';
+            };
+          }; 
+        ?>
+      </div>
+    </section>
+</main>
+<?php $this->partial('footer',[]); ?>

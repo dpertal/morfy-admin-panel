@@ -1,0 +1,71 @@
+<?php $this->partial('head',[]); ?>
+<?php $this->partial('navigation',[]); ?>
+<!-- wrapper -->
+<main id="wrapper">
+    <?php $this->partial('header',['title'=>$title]); ?>
+    <!-- content -->
+    <section id="content">
+      <div class="container">
+        <!-- Main  page -->
+        <?php if(Session::exists('user')){ ?>
+          <!-- pages -->
+          <table class="responsive">
+            <tbody>
+              <tr>
+                <th><?php echo Panel::$lang['Directory'];?></th>
+                <th><?php echo Panel::$lang['Name'];?></th>
+                <th><?php echo Panel::$lang['Extension'];?></th>
+                <th><?php echo Panel::$lang['Options'];?></th>
+              </tr>
+
+          <?php 
+            // generate token
+            $token = Token::generate();
+
+            foreach ($content as $item) {
+              // onloy show pages dir
+              $file = str_replace(ROOTBASE.DS.'content'.DS, '', $item);
+              // get extension
+              $extension = File::ext($file);
+              // get name
+              $name = File::name($file);
+              // directory
+              $directory = str_replace(DS.$name.'.'.$extension, '', $file);
+              // show
+              echo '
+                <tr>
+                  <td>'.$directory.'</td>
+                  <td>'.$name.'</td>
+                  <td>'.$extension.'</td>
+                  <td>
+                     <span class="custom-dropdown">
+                        <select class="selectOption">   
+                          <option>'.Panel::$lang['Select_Option'].' : </option>
+                          <option value="action/preview">
+                          '.Panel::$lang['Preview'].'</option>
+                          <option value="action/edit/'.$token.'/'.base64_encode($item).'">
+                          '.Panel::$lang['Edit_File'].'</option>
+                          <option value="action/newfile/'.$token.'/'.base64_encode($directory).'">
+                          '.Panel::$lang['New_File'].'</option>
+                          <option value="action/newfolder/'.$token.'/'.base64_encode($directory).'">
+                          '.Panel::$lang['New_Folder'].'</option>
+                          <option value="action/rename/'.$token.'/'.base64_encode($item).'">
+                          '.Panel::$lang['Rename_File'].'</option>
+                          <option value="action/removefile/'.$token.'/'.base64_encode($item).'">
+                          '.Panel::$lang['Remove_File'].'</option>
+                          <option value="action/removefolder/'.$token.'/'.base64_encode($directory).'">
+                          '.Panel::$lang['Remove_Folder'].'</option>
+                        </select>
+                     </span>       
+                  </td>
+                </tr>
+              ';
+            }
+          ?>
+            </tbody>
+          </table>
+        <?php }; ?>
+      </div>
+    </section>
+</main>
+<?php $this->partial('footer',[]); ?>

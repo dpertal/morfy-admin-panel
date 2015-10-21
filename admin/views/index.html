@@ -1,0 +1,88 @@
+<?php $this->partial('head',[]); ?>
+<?php $this->partial('navigation',[]); ?>
+<!-- wrapper -->
+<main id="wrapper">
+    <?php $this->partial('header',['title'=>$title]); ?>
+    <!-- content -->
+    <section id="content">
+      <div class="container">
+        <!-- Main  page -->
+        <?php if(Session::exists('user')){ ?>
+            <!-- dashboard -->  
+            <div class="row">
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Pages'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $pages;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/pages" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Images'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $images;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/images" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Uploads'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $uploads;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/uploads" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- dashboard 2 -->  
+            <div class="row">
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Blocks'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $blocks;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/blocks" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Themes'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $themes;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/themes" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="box-3 col">
+                <div class="dashboard-info">
+                  <h3 class="dashboard-name"><?php echo $this::$lang['Plugins'];?></h3>
+                  <div class="dashboard-content">
+                    <div class="num"><?php echo $plugins;?></div>
+                  </div>
+                  <div class="dashboard-footer">
+                    <a href="<?php echo $this->url();?>/plugins" title="Go"><i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <?php }; ?>
+      </div>
+    </section>
+</main>
+<?php $this->partial('footer',[]); ?>

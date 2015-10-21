@@ -1,0 +1,88 @@
+<!-- menu -->
+<nav id="menu">
+    <header>
+        <a href="#">Menu</a>
+    </header>
+    <section>
+        <ul class="navigation">
+            <?php if(session::exists('user')) { ?>
+            <!-- Pages-->
+            <li class="has-dropdown">
+                <a href="<?php echo $this->url();?>/pages"><?php echo Panel::$lang['Pages'];?></a>
+            </li>
+
+            <!-- Blocks-->
+            <li class="has-dropdown">
+                <a href="<?php echo $this->url();?>/blocks"><?php echo Panel::$lang['Blocks'];?></a>
+            </li>      
+
+
+            <!-- Images-->
+            <li class="has-dropdown">
+                <a class="dropdown-link" href="#"> 
+                    <?php echo Panel::$lang['Images'];?>
+                    <span class="arrow"><i class="ti-angle-right"></i></span>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="?g=images">View all Images</a></li>
+                    <li><a href="?g=upload_image">Upload New File</a></li>
+                </ul>
+            </li>
+
+            <!-- Uploads-->
+            <li class="has-dropdown">
+                <a class="dropdown-link" href="#"> 
+                    <?php echo Panel::$lang['Uploads'];?>
+                    <span class="arrow"><i class="ti-angle-right"></i></span>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="?g=uploads">View Files</a></li>
+                </ul>
+            </li>
+
+            <!-- Theme-->
+            <li class="has-dropdown">
+                <a class="dropdown-link" href="#"> 
+                    <?php echo Panel::$lang['Themes'];?>
+                    <span class="arrow"><i class="ti-angle-right"></i></span>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="?g=templates">Templates</a></li>
+                    <li><a href="?g=stylesheets">Stylesheets</a></li>
+                    <li><a href="?g=javascript">Javascript</a></li>
+                </ul>
+            </li>
+
+
+            <!-- Settings-->
+            <li class="has-dropdown">
+                <a class="dropdown-link" href="#"> 
+                    <?php echo Panel::$lang['Settings'];?>
+                    <span class="arrow"><i class="ti-angle-right"></i></span>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="?g=settings">Configuration</a></li>
+                    <li><a href="?g=backups">Backups</a></li>
+                </ul>
+            </li>
+
+            <!-- Support-->
+            <li class="has-dropdown">
+                <a class="dropdown-link" href="#"> 
+                    <?php echo Panel::$lang['Support'];?>
+                    <span class="arrow"><i class="ti-angle-right"></i></span>
+                </a>
+                <ul class="dropdown">
+                    <li><a target="_blank" href="http://morfy.org/documentation">Documentation</a></li>
+                    <li> <a target="_blank" href="http://forum.morfy.org/" title="Morfy Forum">Morfy Forum</a></li>
+                    <li><a href="?g=extra">Extra</a></li>
+                </ul>
+            </li>
+            <?php }; ?>
+        </ul>
+    </section>
+
+    <footer>
+        <?php echo $this->appName;?> :: <?php echo $this->version;?>
+    </footer>
+</nav>

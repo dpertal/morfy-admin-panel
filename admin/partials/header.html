@@ -1,0 +1,33 @@
+<!-- header -->
+<header id="header">
+  <?php if (Session::exists('user')){ ?>
+  <!-- btn menu -->
+  <a class="menu" href="#" title="Show Menu">
+    <i class="ti-layout-sidebar-left"></i>
+  </a>
+  <?php }; ?>
+   <!-- App name -->
+  <h2>
+    <a href="<?php echo $this->url();?>" class="header-title">
+      <?php echo Panel::$site['title'].' | '.$title;?> 
+    </a>
+  </h2>
+  <!-- right menu -->
+   <div class="right">
+      <a target="_blank" href="<?php echo $this->url();?>/action/preview" title="View">
+          <i class="ti-eye"></i>
+      </a>
+      <?php if (Session::exists('user')){ ?>
+        <a href="<?php echo $this->url();?>/action/settings" title="Settings">
+            <i class="ti-settings"></i>
+        </a>
+        <a href="<?php echo $this->url();?>/action/logout" title="Logout">
+            <i class="ti-unlock"></i>
+        </a>
+      <?php }else{ ?>
+        <a href="<?php echo $this->url();?>/action/login" title="login">
+            <i class="ti-lock"></i>
+        </a>
+      <?php };?>
+   </div>
+</header>

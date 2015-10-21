@@ -1,0 +1,18 @@
+<?php $this->partial('head',[]); ?>
+<?php $this->partial('navigation',[]); ?>
+<!-- wrapper -->
+<main id="wrapper">
+    <?php $this->partial('header',['title'=>$title]); ?>
+    <!-- content -->
+    <section id="content">
+      <div class="container">
+        <!-- Main  page -->
+        <?php if(Session::exists('user')){ ?>
+
+          <?php echo $content;?>
+
+        <?php }; ?>
+      </div>
+    </section>
+</main>
+<?php $this->partial('footer',[]); ?>
