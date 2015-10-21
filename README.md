@@ -1,5 +1,5 @@
 # Morfy-Panel
 Backend for Morfy CMS
 
-**Very Important: **
+**Very Important:**
     Is not Ready yet
